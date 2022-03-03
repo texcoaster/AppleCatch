@@ -9,6 +9,7 @@ public class ItemGenerator : MonoBehaviour
     float span = 0.7f;
     float delta = 0;
     int ratio = 5;
+    float speed = -0.05f;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,14 @@ public class ItemGenerator : MonoBehaviour
             float x = Random.Range(-1, 2);
             float z = Random.Range(-1, 2);
             item.transform.position = new Vector3(x, 4, z);
+            item.GetComponent<ItemController>().dropSpeed = this.speed;
         }
+    }
+
+    public void SetParameter(float span, float speed, int ratio)
+    {
+        this.span = span;
+        this.speed = speed;
+        this.ratio = ratio;
     }
 }
