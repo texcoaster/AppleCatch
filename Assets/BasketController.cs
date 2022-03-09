@@ -57,5 +57,71 @@ public class BasketController : MonoBehaviour
                 transform.position = new Vector3(x, 0, z);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            transform.position = new Vector3(-1, 0, -1);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            transform.position = new Vector3(0, 0, -1);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad3))
+        {
+            transform.position = new Vector3(1, 0, -1);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad4))
+        {
+            transform.position = new Vector3(-1, 0, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad5))
+        {
+            transform.position = new Vector3(0, 0, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad6))
+        {
+            transform.position = new Vector3(1, 0, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad7))
+        {
+            transform.position = new Vector3(-1, 0, 1);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad8))
+        {
+            transform.position = new Vector3(0, 0, 1);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad9))
+        {
+            transform.position = new Vector3(1, 0, 1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (transform.position.z != 1)
+            {
+                transform.Translate(0, 0, 1);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if (transform.position.z != -1)
+            {
+                transform.Translate(0, 0, -1);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (transform.position.x != -1)
+            {
+                transform.Translate(-1, 0, 0);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (transform.position.x != 1)
+            {
+                transform.Translate(1, 0, 0);
+            }
+        }
     }
 }
